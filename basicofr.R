@@ -50,3 +50,12 @@ rm(x,A)
 remove(a)
 # BORRAR TODAS LAS VARIABLES
 rm(list=ls())
+
+browseURL("http://cran.r-project.org/web/views/")
+
+# INFORMACIÓN SOBRE ALGÚN COMANDO ? 
+? require
+
+# MUESTRA LIBRERIAS DISPONIBLES
+library()
+
