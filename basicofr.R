@@ -121,3 +121,36 @@ barplot(y[order(y)])
 
 # Ordenando las barras descendentemente
 barplot(y[order(-y)])
+
+# Creando gráfico de barras horizontales
+barplot(y[order(y)],horiz = TRUE)
+
+# Gráfico con un sólo color
+barplot(y[order(y)],horiz = TRUE,col = "green")
+
+# Gráfico de varios colores
+barplot(y[order(y)],horiz = TRUE,col = c("green", "yellow", "blue", "grey"))
+
+# Si queremos saber qué colores hay disponibles
+colors()
+
+# Eliminando los bordes
+barplot(y[order(y)],horiz = TRUE,col = c("green", "yellow", "blue", "grey"),border = NA)
+
+# Agregando título
+barplot(y[order(y)],horiz = TRUE,col = c("green", "yellow", "blue", "grey"),border = NA,main="Frequency \n of Regions")
+
+# Agregando leyenda a los ejes
+barplot(y[order(y)],horiz = TRUE,col = c("green", "yellow", "blue", "grey"),border = NA,main="Frequency \n of Regions",xlab="Frequency", ylab="Regions")
+
+# Almacenando una imagen desde el código
+png(filename = "../Freq.png", width = 888, height = 570)
+barplot(y[order(y)],horiz = TRUE,col = c("green", "yellow", "blue", "grey"),border = NA,main="Frequency \n of Regions",xlab="Frequency", ylab="Regions")
+dev.off()
+
+# Creando Histogramas
+hist(customer$Age)
+# Se establecen los intervalos
+hist(customer$Age,breaks = 5)
+# Se mejora la apariencia del histograma
+hist(customer$Age,breaks = c(0,40,60,100),freq = TRUE, col="green", main = "Histogram of Age")
