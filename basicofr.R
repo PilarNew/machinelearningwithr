@@ -74,7 +74,29 @@ iris
 
 data("iris")
 
+######### CREANDO SECUENCIAS ################
+
 x1 <- 1:10
+
+#### USANDO LA FUNCIÓN C()
+
 x2 <- c(2,5,7,4)
-# Creación de una secuencia de números comenzando desde el 5 al 50, con una separación de 5
+
+# Operador seq(). Creación de una secuencia de números comenzando desde el 5 al 50, con una separación de 5
 x3 <- seq(5,50, by = 5)
+
+x4 <- scan() 
+x4
+
+##### Leyendo data desde archivos ######
+
+##### Archivos de texto #######
+product <- read.table("../Product.txt",header = TRUE, sep ="\t")
+product
+str(product)
+summary(product)
+
+###### Archivos CSV #########
+customer <- read.csv("../Customer.csv",header = TRUE)
+str(customer)
+customer
