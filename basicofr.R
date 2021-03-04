@@ -100,3 +100,24 @@ summary(product)
 customer <- read.csv("../Customer.csv",header = TRUE)
 str(customer)
 customer
+
+#### Para ver en una tabla ####
+
+View(customer)
+
+### Fracuencia de una región
+# Almacenamos la información de una columna en una variable y
+
+y <- table(customer$Region)
+
+# Mostraremos la frecuencia de cada estado
+View(y)
+
+# Haciendo un gráfico de barras
+barplot(y)
+
+# Ordenando las barras ascendentemente
+barplot(y[order(y)])
+
+# Ordenando las barras descendentemente
+barplot(y[order(-y)])
