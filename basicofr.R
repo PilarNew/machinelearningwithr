@@ -58,4 +58,23 @@ browseURL("http://cran.r-project.org/web/views/")
 
 # MUESTRA LIBRERIAS DISPONIBLES
 library()
+search()
 
+data()
+library(help="datasets")
+
+# Muestra en help como usar el dataset
+? iris
+
+# Muestra información resumida del dataset
+str(iris)
+
+# Muestra los datos contenidos en el dataset
+iris
+
+data("iris")
+
+x1 <- 1:10
+x2 <- c(2,5,7,4)
+# Creación de una secuencia de números comenzando desde el 5 al 50, con una separación de 5
+x3 <- seq(5,50, by = 5)
