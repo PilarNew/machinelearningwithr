@@ -48,3 +48,5 @@ ls()
 #####################################################
 rm(x,A)
 remove(a)
+# BORRAR TODAS LAS VARIABLES
+rm(list=ls())
